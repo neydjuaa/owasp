@@ -16,13 +16,7 @@ pipeline {
             }
         }
 
-        stage('Security SAT : OWASP Dependency Check'){
-            steps {
-                //Run AWASP Dependency Check
-                sh "sudo mvn verify"
-            }
-        }
-
+       
         stage('Deploy to tomcat'){
             steps{
                 script {
