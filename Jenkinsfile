@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script {
                     // Deploy to tomcat
-                    sh 'cp target/MyWebAppSecurity.war /opt/tomcat/webapps/mywebapp.war'
+                    sh 'sudo cp target/MyWebAppSecurity.war /opt/tomcat/webapps/mywebapp.war'
                 }
             }
         }
