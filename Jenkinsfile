@@ -31,7 +31,7 @@ pipeline {
                 script {
                     // Run ZAP Docker container for Active Scan elevated privileges
 
-                    sh 'docker run --rm -v /home/vagrant:/zap/wrk/:rw -t ghcr.io/zaproxy:stable zap-baseline.py -t http://192.168.56.5:8080/mywebapp/ -x report_OWASP || exit 0'
+                    sh 'docker run  -v /home/vagrant:/zap/wrk/:rw -t ghcr.io/zaproxy:stable zap-baseline.py -t http://192.168.56.5:8080/mywebapp/ -x report_OWASP || exit 0'
                 }
             }
         }
